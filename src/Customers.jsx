@@ -84,14 +84,16 @@ export default class Customers extends Component {
         <tr key={customer.id}>
           <td>{customer.id}</td>
           <td>{customer.name}</td>
-          <td>{customer.phone?customer.phone:"No Phone"}</td>
+          <td>{customer.phone ? customer.phone : 'No Phone'}</td>
           <td>{customer.address.city}</td>
           <td>
             <img src={customer.photo} alt="customer" />
             <div className="">
               <button
                 className="btn btn-secondary"
-                onClick={()=>{this.handlePictureClick(customer, index)}}
+                onClick={() => {
+                  this.handlePictureClick(customer, index)
+                }}
               >
                 Change Picture
               </button>
@@ -99,12 +101,12 @@ export default class Customers extends Component {
           </td>
         </tr>
       )
-    });
-  };
+    })
+  }
 
   handlePictureClick = (customer, index) => {
-    var customerArray = this.state.customers;
-    customerArray[index].photo = "https://picsum.photos/130/60";
-    this.setState({customers: customerArray});
-  };
+    var customerArray = this.state.customers
+    customerArray[index].photo = 'https://picsum.photos/130/60'
+    this.setState({ customers: customerArray })
+  }
 }
