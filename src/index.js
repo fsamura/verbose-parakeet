@@ -8,6 +8,7 @@ import "popper.js/dist/umd/popper";
 import "font-awesome/css/font-awesome.css";
 // users defind files
 // import App from './App';
+import Customers from './Customers';
 import "./index.css";
 import NavBar from './NavBar';
 
@@ -17,5 +18,6 @@ root.render(
   <React.StrictMode>
     {/* <App /> */}
     <NavBar />
+    <Customers />
   </React.StrictMode>
 );
