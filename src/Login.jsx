@@ -27,7 +27,6 @@ class Login extends Component {
             value={this.state.email}
             onChange={(event) => {
               this.setState({ email: event.target.value });
-              console.log(this.state.email);
             }}
           />
         </div>
@@ -44,7 +43,6 @@ class Login extends Component {
             value={this.state.password}
             onChange={(event) => {
               this.setState({ password: event.target.value });
-              console.log(this.state.password);
             }}
           />
           <div className="text-end p-1">
@@ -57,11 +55,18 @@ class Login extends Component {
       </div>
     );
   }
-  handleSubmit = () => {
-    if (
-      (this.state.email === "fsamura01@gmail.com") &
-      (this.state.password === "Fs@mura01")
-    ) {
+  handleSubmit = async () => {
+    console.log(this.state);
+    var response = await fetch(
+      `http://localhost:5000/users?email=${this.state.email}&password=${this.state.password}`,
+      { method: "GET" }
+    );
+    console.log(response);
+    var body = await response.json();
+    console.log("body", body);
+    console.log(body.length);
+
+    if (body.length > 0) {
       this.setState({
         message: <span className="text-success">Success!</span>,
       });
