@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 // pre-defind files
 import "jquery";
 import "bootstrap/dist/js/bootstrap";
@@ -10,12 +10,11 @@ import "font-awesome/css/font-awesome.css";
 // import App from './App';
 // import Customers from './Customers';
 import "./index.css";
-import NavBar from './NavBar';
-// import ShoppingCart from './ShoppingCart';
-import Login from './Login';
+import NavBar from "./NavBar";
+// import ShoppingCart from "./ShoppingCart";
+import Login from "./Login";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
