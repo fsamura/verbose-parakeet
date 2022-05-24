@@ -11,7 +11,8 @@ import "font-awesome/css/font-awesome.css";
 // import Customers from './Customers';
 import "./index.css";
 import NavBar from './NavBar';
-import ShoppingCart from './ShoppingCart';
+// import ShoppingCart from './ShoppingCart';
+import Login from './Login';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,6 +20,6 @@ root.render(
   <React.StrictMode>
     {/* <App /> */}
     <NavBar />
-    <ShoppingCart />
+    <Login />
   </React.StrictMode>
 );
